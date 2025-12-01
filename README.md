@@ -55,8 +55,8 @@ Before running this project, ensure you have:
 
 ### Step 1: Clone the Repository
 ```bash
-git clone <your-repo-url>
-cd rfp-management-system
+git clone https://github.com/RohitBeniwal/ai-powered-rfp-system.git
+cd ai-powered-rfp-system
 ```
 
 ### Step 2: Backend Setup
@@ -370,7 +370,7 @@ If I had more time, I would add:
 
 ## 📹 Demo Video
 
-[Link to demo video will be added here]
+**🎥 Watch the Full Demo:** https://www.loom.com/share/e2bddd6809744b4aab92f89ae765f7a7
 
 5-10 minute walkthrough showing:
 1. RFP creation from natural language
@@ -386,9 +386,9 @@ This project was created as an SDE assignment.
 
 ## 👤 Author
 
-[Your Name]
-[Your Email]
-[Your GitHub]
+**Rohit Beniwal**
+- GitHub: [@RohitBeniwal](https://github.com/RohitBeniwal)
+- Repository: [ai-powered-rfp-system](https://github.com/RohitBeniwal/ai-powered-rfp-system)
 
 ---
 
