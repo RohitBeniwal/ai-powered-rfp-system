@@ -109,15 +109,23 @@ function ComparisonView() {
               </tr>
             </thead>
             <tbody>
-              {comparison.proposals.map((proposal) => (
-                <tr key={proposal.id}>
-                  <td><strong>{proposal.vendor_name}</strong></td>
-                  <td>{proposal.parsed_data.pricing || 'N/A'}</td>
-                  <td>{proposal.parsed_data.delivery_time || 'N/A'}</td>
-                  <td>{proposal.parsed_data.warranty || 'N/A'}</td>
-                  <td>{proposal.parsed_data.payment_terms || 'N/A'}</td>
-                </tr>
-              ))}
+              {comparison.proposals.map((proposal) => {
+                const renderValue = (value) => {
+                  if (!value) return 'N/A';
+                  if (typeof value === 'object') return JSON.stringify(value);
+                  return value;
+                };
+                
+                return (
+                  <tr key={proposal.id}>
+                    <td><strong>{proposal.vendor_name}</strong></td>
+                    <td>{renderValue(proposal.parsed_data.pricing)}</td>
+                    <td>{renderValue(proposal.parsed_data.delivery_time)}</td>
+                    <td>{renderValue(proposal.parsed_data.warranty)}</td>
+                    <td>{renderValue(proposal.parsed_data.payment_terms)}</td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
